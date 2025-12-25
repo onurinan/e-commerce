@@ -3,6 +3,7 @@ import "../css/header.css"
 import { CiShoppingBasket } from "react-icons/ci";
 import { CiLight } from "react-icons/ci";
 import { FaMoon } from "react-icons/fa";
+import Badge from '@mui/material/Badge';
 
 const Header = () => {
     const [theme, setTheme] = useState(false)
@@ -20,7 +21,9 @@ const Header = () => {
             <div className="flex-row">
                 <input className="search-input" placeholder="ara" type="text" name="" id="" />
                 <div className="header-icons-wrapper">
-                    <CiShoppingBasket className="icons" />
+                    <Badge badgeContent={4} color="primary">
+                        <CiShoppingBasket className="icons" />
+                    </Badge>
                     {
                         theme ? <FaMoon onClick={changeTheme} className="icons" /> : <CiLight onClick={changeTheme} className="icons" />
                     }

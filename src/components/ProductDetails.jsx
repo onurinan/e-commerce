@@ -5,6 +5,7 @@ import { setSelectedProduct } from "../redux/slices/ProductSlice"
 import { CiCirclePlus } from "react-icons/ci";
 import { CiCircleMinus } from "react-icons/ci";
 import "../css/ProductDetails.css"
+import { addToCart } from "../redux/slices/cartSlice";
 
 const ProductDetails = () => {
     const { id } = useParams()
@@ -37,6 +38,18 @@ const ProductDetails = () => {
         }
     }
 
+    const addToCartItems = () => {
+        const payload = {
+            id,
+            price,
+            image,
+            title,
+            description,
+            count: count
+        }
+        dispatch(addToCart(payload))
+    }
+
     return (
         <div className="product-details flex-row">
             <div className="product-details__imagewrapper">
@@ -58,7 +71,7 @@ const ProductDetails = () => {
                 </div>
 
                 <div className="product-details__buttonwrapper">
-                    <button className="product-details__button">Sepete Ekle</button>
+                    <button onClick={addToCartItems} className="product-details__button">Sepete Ekle</button>
                 </div>
             </div>
         </div>
