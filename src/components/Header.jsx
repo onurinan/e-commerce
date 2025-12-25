@@ -4,9 +4,12 @@ import { CiShoppingBasket } from "react-icons/ci";
 import { CiLight } from "react-icons/ci";
 import { FaMoon } from "react-icons/fa";
 import Badge from '@mui/material/Badge';
+import { useSelector } from "react-redux";
 
 const Header = () => {
     const [theme, setTheme] = useState(false)
+
+    const { products } = useSelector((store) => store.cart)
 
     const changeTheme = () => {
         setTheme(!theme)
@@ -21,7 +24,7 @@ const Header = () => {
             <div className="flex-row">
                 <input className="search-input" placeholder="ara" type="text" name="" id="" />
                 <div className="header-icons-wrapper">
-                    <Badge badgeContent={4} color="primary">
+                    <Badge badgeContent={products.length} color="primary">
                         <CiShoppingBasket className="icons" />
                     </Badge>
                     {
