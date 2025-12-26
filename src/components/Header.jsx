@@ -6,7 +6,7 @@ import { FaMoon } from "react-icons/fa";
 import Badge from '@mui/material/Badge';
 import { useSelector } from "react-redux";
 
-const Header = () => {
+const Header = ({ openCart }) => {
     const [theme, setTheme] = useState(false)
 
     const { products } = useSelector((store) => store.cart)
@@ -25,7 +25,7 @@ const Header = () => {
                 <input className="search-input" placeholder="ara" type="text" name="" id="" />
                 <div className="header-icons-wrapper">
                     <Badge badgeContent={products.length} color="primary">
-                        <CiShoppingBasket className="icons" />
+                        <CiShoppingBasket onClick={openCart} className="icons" />
                     </Badge>
                     {
                         theme ? <FaMoon onClick={changeTheme} className="icons" /> : <CiLight onClick={changeTheme} className="icons" />
