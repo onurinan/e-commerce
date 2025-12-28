@@ -2,6 +2,7 @@ import React from 'react'
 import Drawer from '@mui/material/Drawer';
 import { IoClose } from "react-icons/io5";
 import { useSelector } from "react-redux"
+import "../css/cartDrawer.css"
 
 const CartDrawer = ({ toggleCart, openCart }) => {
     const { products } = useSelector((store) => store.cart)
@@ -14,12 +15,15 @@ const CartDrawer = ({ toggleCart, openCart }) => {
                     products?.map((product) => {
                         return (
                             <div key={product.id} className="cart-items__wrapper">
-                                <img className="cart-items__image" src={product.image} alt="cart image" />
-                                <div className="cart-items__content">
-                                    <h4>{product.title}</h4>
-                                    <h4>{product.price}₺</h4>
-                                    <p>{product.count} Adet</p>
+                                <div className="cart-items-content__wrapper">
+                                    <img className="cart-items__image" src={product.image} alt="cart image" />
+                                    <div className="cart-items__content">
+                                        <h4>{product.title}</h4>
+                                        <h4>{product.price}₺</h4>
+                                        <p>{product.count} Adet</p>
+                                    </div>
                                 </div>
+                                <button className="cart-items__deletebutton">Sil</button>
                             </div>
                         )
                     })

@@ -16,28 +16,3 @@ body {
     align-items: center;
     justify-content: center;
 }
-
-.cart-items__wrapper {
-    display: flex;
-    align-items: center;
-}
-
-.cart-items__image {
-    width: 100px;
-    height: 100px;
-}
-
-.cart-items__content {
-    padding: 0px 20px;
-}
-
-.close-icon {
-    font-size: 24px;
-    margin: 16px;
-    text-align: end;
-    border-radius: 50%;
-}
-
-.close-icon:hover {
-    cursor: pointer;
-}
