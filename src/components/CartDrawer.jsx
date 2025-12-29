@@ -10,7 +10,7 @@ const CartDrawer = () => {
     const dispatch = useDispatch()
 
     return (
-        <Drawer aria-hidden="false" anchor="right" open={drawer}>
+        <Drawer aria-hidden="false" anchor="right" open={drawer} onClose={() => dispatch(setDrawer())}>
             <>
                 <IoClose onClick={() => dispatch(setDrawer())} className="close-icon" />
                 {
