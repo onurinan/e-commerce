@@ -10,7 +10,8 @@ const getCartFromStorage = () => {
 
 const initialState = {
     products: getCartFromStorage(),
-    drawer: false
+    drawer: false,
+    totalAmount: 0
 }
 
 const writeFromCartToStorage = (cart) => {
@@ -36,10 +37,16 @@ export const cartSlice = createSlice({
         },
         setDrawer: (state) => {
             state.drawer = !state.drawer
+        },
+        calculateTotalAmount: (state) => {
+            state.totalAmount = 0
+            state.products?.map((product) => {
+                state.totalAmount += product.price * product.count
+            })
         }
     },
 })
 
-export const { addToCart, setDrawer } = cartSlice.actions
+export const { addToCart, setDrawer, calculateTotalAmount } = cartSlice.actions
 
 export default cartSlice.reducer

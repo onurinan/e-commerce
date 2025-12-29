@@ -5,7 +5,7 @@ import { setSelectedProduct } from "../redux/slices/ProductSlice"
 import { CiCirclePlus } from "react-icons/ci";
 import { CiCircleMinus } from "react-icons/ci";
 import "../css/ProductDetails.css"
-import { addToCart } from "../redux/slices/cartSlice";
+import { addToCart, calculateTotalAmount } from "../redux/slices/cartSlice";
 
 const ProductDetails = () => {
     const { id } = useParams()
@@ -48,6 +48,7 @@ const ProductDetails = () => {
             count: count
         }
         dispatch(addToCart(payload))
+        dispatch(calculateTotalAmount())
     }
 
     return (

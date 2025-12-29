@@ -1,13 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Drawer from '@mui/material/Drawer';
 import { IoClose } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux"
 import "../css/cartDrawer.css"
-import { setDrawer } from "../redux/slices/cartSlice";
+import { calculateTotalAmount, setDrawer } from "../redux/slices/cartSlice";
 
 const CartDrawer = () => {
-    const { products, drawer } = useSelector((store) => store.cart)
+    const { products, drawer, totalAmount } = useSelector((store) => store.cart)
     const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(calculateTotalAmount())
+    }, [])
 
     return (
         <Drawer aria-hidden="false" anchor="right" open={drawer} onClose={() => dispatch(setDrawer())}>
@@ -30,6 +34,7 @@ const CartDrawer = () => {
                         )
                     })
                 }
+                <h3 className="total-amount">Total: {totalAmount}₺</h3>
             </>
         </Drawer>
     )

@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 10px;
 }
 
 .cart-items-content__wrapper {
@@ -37,5 +38,9 @@
     color: wheat;
     border-radius: 6px;
     cursor: pointer;
+    margin: 10px;
+}
+
+.total-amount {
     margin: 10px;
 }
