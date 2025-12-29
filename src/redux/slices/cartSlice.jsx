@@ -9,7 +9,8 @@ const getCartFromStorage = () => {
 }
 
 const initialState = {
-    products: getCartFromStorage()
+    products: getCartFromStorage(),
+    drawer: false
 }
 
 const writeFromCartToStorage = (cart) => {
@@ -32,10 +33,13 @@ export const cartSlice = createSlice({
                 state.products = [...state.products, action.payload]
                 writeFromCartToStorage(state.products)
             }
+        },
+        setDrawer: (state) => {
+            state.drawer = !state.drawer
         }
     },
 })
 
-export const { addToCart } = cartSlice.actions
+export const { addToCart, setDrawer } = cartSlice.actions
 
 export default cartSlice.reducer

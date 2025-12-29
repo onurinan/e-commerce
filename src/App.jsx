@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import viteLogo from '/vite.svg'
 import './App.css'
 import PageContainer from './container/PageContainer'
@@ -8,19 +7,13 @@ import Loading from "./components/Loading"
 import CartDrawer from "./components/CartDrawer"
 
 function App() {
-  const [toggleCart, setToggleCart] = useState(false)
-
-  const openCart = () => {
-    setToggleCart(!toggleCart)
-  }
-
   return (
     <div>
       <PageContainer>
-        <Header openCart={openCart} />
+        <Header />
         <RouterConfig />
         <Loading />
-        <CartDrawer toggleCart={toggleCart} openCart={openCart} />
+        <CartDrawer />
       </PageContainer>
     </div >
   )

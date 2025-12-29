@@ -1,16 +1,18 @@
 import React from 'react'
 import Drawer from '@mui/material/Drawer';
 import { IoClose } from "react-icons/io5";
-import { useSelector } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import "../css/cartDrawer.css"
+import { setDrawer } from "../redux/slices/cartSlice";
 
-const CartDrawer = ({ toggleCart, openCart }) => {
-    const { products } = useSelector((store) => store.cart)
+const CartDrawer = () => {
+    const { products, drawer } = useSelector((store) => store.cart)
+    const dispatch = useDispatch()
 
     return (
-        <Drawer aria-hidden="false" anchor="right" open={toggleCart}>
+        <Drawer aria-hidden="false" anchor="right" open={drawer}>
             <>
-                <IoClose onClick={openCart} className="close-icon" />
+                <IoClose onClick={() => dispatch(setDrawer())} className="close-icon" />
                 {
                     products?.map((product) => {
                         return (
