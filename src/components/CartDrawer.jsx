@@ -3,7 +3,7 @@ import Drawer from '@mui/material/Drawer';
 import { IoClose } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux"
 import "../css/cartDrawer.css"
-import { calculateTotalAmount, setDrawer } from "../redux/slices/cartSlice";
+import { calculateTotalAmount, deleteFromCart, setDrawer } from "../redux/slices/cartSlice";
 
 const CartDrawer = () => {
     const { products, drawer, totalAmount } = useSelector((store) => store.cart)
@@ -29,7 +29,11 @@ const CartDrawer = () => {
                                         <p>{product.count} Adet</p>
                                     </div>
                                 </div>
-                                <button className="cart-items__deletebutton">Sil</button>
+                                <button value={product.id} onClick={(e) => {
+                                    dispatch(deleteFromCart(e.target.value))
+                                    dispatch(calculateTotalAmount())
+                                }}
+                                    className="cart-items__deletebutton">Sil</button>
                             </div>
                         )
                     })

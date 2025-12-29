@@ -43,10 +43,15 @@ export const cartSlice = createSlice({
             state.products?.map((product) => {
                 state.totalAmount += product.price * product.count
             })
+        },
+        deleteFromCart: (state, action) => {
+            const extractedProducts = state.products?.filter((product) => product.id !== action.payload)
+            state.products = [...extractedProducts]
+            writeFromCartToStorage(state.products)
         }
     },
 })
 
-export const { addToCart, setDrawer, calculateTotalAmount } = cartSlice.actions
+export const { addToCart, setDrawer, calculateTotalAmount, deleteFromCart } = cartSlice.actions
 
 export default cartSlice.reducer
