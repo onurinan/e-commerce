@@ -3,6 +3,7 @@ import axios from "axios"
 
 const initialState = {
     products: [],
+    filteredProducts: [],
     selectedProduct: {},
     loading: false
 }
@@ -23,6 +24,10 @@ export const productSlice = createSlice({
     reducers: {
         setSelectedProduct: (state, action) => {
             state.selectedProduct = action.payload
+        },
+        getProductBySearch: (state, action) => {
+            const searchKeywords = action.payload.toLowerCase()
+            state.filteredProducts = state.products?.filter((product) => product.title.toLowerCase().includes(searchKeywords))
         }
     },
     extraReducers: (builder) => {
@@ -32,10 +37,11 @@ export const productSlice = createSlice({
         builder.addCase(getAllProducts.fulfilled, (state, action) => {
             state.loading = false
             state.products = action.payload
+            state.filteredProducts = action.payload
         })
     }
 })
 
-export const { setSelectedProduct } = productSlice.actions
+export const { setSelectedProduct, getProductBySearch } = productSlice.actions
 
 export default productSlice.reducer

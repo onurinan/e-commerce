@@ -6,6 +6,7 @@ import { FaMoon } from "react-icons/fa";
 import Badge from '@mui/material/Badge';
 import { useDispatch, useSelector } from "react-redux";
 import { setDrawer } from "../redux/slices/cartSlice";
+import { getProductBySearch } from "../redux/slices/ProductSlice";
 
 const Header = () => {
     const [theme, setTheme] = useState(false)
@@ -16,6 +17,10 @@ const Header = () => {
         setTheme(!theme)
     }
 
+    const handleSearch = (e) => {
+        dispatch(getProductBySearch(e.target.value))
+    }
+
     return (
         <div className="header-wrapper">
             <div className="flex-row">
@@ -23,7 +28,7 @@ const Header = () => {
                 <p>Onur A.S.</p>
             </div>
             <div className="flex-row">
-                <input className="search-input" placeholder="ara" type="text" name="" id="" />
+                <input onChange={handleSearch} className="search-input" placeholder="ara" type="text" name="searh" id="search" />
                 <div className="header-icons-wrapper">
                     <Badge badgeContent={products.length} color="primary">
                         <CiShoppingBasket onClick={() => dispatch(setDrawer())} className="icons" />
