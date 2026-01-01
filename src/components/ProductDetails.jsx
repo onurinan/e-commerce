@@ -68,7 +68,7 @@ const ProductDetails = () => {
                 <div className="product-details__iconswrapper">
                     <CiCirclePlus className="product-details__icons" onClick={increment} />
                     <p className="product-details__count">{count}</p>
-                    <CiCircleMinus className="product-details__icons" onClick={decrement} />
+                    <CiCircleMinus className={`product-details__icons ${count === 1 ? 'disabled-icon' : ''}`} onClick={decrement} />
                 </div>
 
                 <div className="product-details__buttonwrapper">
