@@ -7,11 +7,13 @@ import Badge from '@mui/material/Badge';
 import { useDispatch, useSelector } from "react-redux";
 import { setDrawer } from "../redux/slices/cartSlice";
 import { getProductBySearch } from "../redux/slices/ProductSlice";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
     const [theme, setTheme] = useState(false)
     const { products } = useSelector((store) => store.cart)
     const dispatch = useDispatch()
+    const navigate = useNavigate()
 
     const changeTheme = () => {
         setTheme(!theme)
@@ -21,9 +23,13 @@ const Header = () => {
         dispatch(getProductBySearch(e.target.value))
     }
 
+    const navigateToHome = () => {
+        navigate("/")
+    }
+
     return (
         <div className="header-wrapper">
-            <div className="flex-row">
+            <div onClick={navigateToHome} className="header-logo flex-row">
                 <img className="logo" src="../src/images/logo.png" alt="logo" />
                 <p>Onur A.S.</p>
             </div>
