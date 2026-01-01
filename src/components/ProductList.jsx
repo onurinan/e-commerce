@@ -15,7 +15,7 @@ const ProductList = () => {
     return (
         <div className="flex-row product-list">
             {
-                filteredProducts?.map((product) => (
+                filteredProducts.length == 0 ? <h3>Product Not Found</h3> : filteredProducts?.map((product) => (
                     <Product key={product.id} product={product} />
                 ))
             }
