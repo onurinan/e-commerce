@@ -11,7 +11,7 @@ const CartDrawer = () => {
 
     useEffect(() => {
         dispatch(calculateTotalAmount())
-    }, [])
+    }, [dispatch])
 
     return (
         <Drawer aria-hidden="false" anchor="right" open={drawer} onClose={() => dispatch(setDrawer())}>

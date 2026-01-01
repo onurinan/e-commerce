@@ -18,7 +18,7 @@ const ProductDetails = () => {
 
     useEffect(() => {
         getProductById()
-    }, [])
+    }, [dispatch])
 
     const getProductById = () => {
         products?.map((product) => {
