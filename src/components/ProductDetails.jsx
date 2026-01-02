@@ -21,7 +21,7 @@ const ProductDetails = () => {
     }, [dispatch])
 
     const getProductById = () => {
-        products?.map((product) => {
+        products?.find((product) => {
             if (product.id == id) {
                 dispatch(setSelectedProduct(product))
             }
