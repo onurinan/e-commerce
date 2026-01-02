@@ -18,6 +18,14 @@ export const getAllProducts = createAsyncThunk(
     }
 )
 
+export const getProductByIDFromAPI = createAsyncThunk(
+    "getProductByIDFromAPI",
+    async (id) => {
+        const response = await axios.get(`${BASE_URL}/products/${id}`)
+        return response.data
+    }
+)
+
 export const productSlice = createSlice({
     name: "product",
     initialState,
@@ -38,6 +46,13 @@ export const productSlice = createSlice({
             state.loading = false
             state.products = action.payload
             state.filteredProducts = action.payload
+        })
+        builder.addCase(getProductByIDFromAPI.pending, (state) => {
+            state.loading = true
+        })
+        builder.addCase(getProductByIDFromAPI.fulfilled, (state, action) => {
+            state.loading = false
+            state.selectedProduct = action.payload
         })
     }
 })

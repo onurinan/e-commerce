@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useCallback } from 'react'
 import { useParams } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
-import { setSelectedProduct } from "../redux/slices/ProductSlice"
+import { getProductByIDFromAPI, setSelectedProduct } from "../redux/slices/ProductSlice"
 import { CiCirclePlus } from "react-icons/ci";
 import { CiCircleMinus } from "react-icons/ci";
 import "../css/ProductDetails.css"
@@ -9,7 +9,7 @@ import { addToCart, calculateTotalAmount } from "../redux/slices/cartSlice";
 
 const ProductDetails = () => {
     const { id } = useParams()
-    const { products, selectedProduct } = useSelector((store) => store.product)
+    const { products, selectedProduct, loading } = useSelector((store) => store.product)
     const { description, image, price, title } = selectedProduct
 
     const [count, setCount] = useState(1)
@@ -20,13 +20,17 @@ const ProductDetails = () => {
         getProductById()
     }, [dispatch])
 
-    const getProductById = () => {
-        products?.find((product) => {
-            if (product.id == id) {
-                dispatch(setSelectedProduct(product))
-            }
-        })
-    }
+    const getProductById = useCallback(() => {
+        if (products?.length > 0) {
+            products?.find((product) => {
+                if (product.id == id) {
+                    dispatch(setSelectedProduct(product))
+                }
+            })
+        } else {
+            dispatch(getProductByIDFromAPI(id))
+        }
+    }, [id, products, dispatch])
 
     const increment = () => {
         setCount(count + 1)
