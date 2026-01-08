@@ -23,17 +23,13 @@ export const cartSlice = createSlice({
     initialState,
     reducers: {
         addToCart: (state, action) => {
-            const findedProduct = state.products?.find((product) => product.id === action.payload.id)
-            if (findedProduct) {
-                // already added some items to the cart
-                const extractedProducts = state.products.filter((product) => product.id != action.payload.id)
-                findedProduct.count += action.payload.count
-                state.products = [...extractedProducts, findedProduct]
-                writeFromCartToStorage(state.products)
+            const product = state.products.find((p) => p.id === action.payload.id);
+            if (product) {
+                product.count += action.payload.count;
             } else {
-                state.products = [...state.products, action.payload]
-                writeFromCartToStorage(state.products)
+                state.products.push(action.payload);
             }
+            writeFromCartToStorage(state.products);
         },
         setDrawer: (state) => {
             state.drawer = !state.drawer
