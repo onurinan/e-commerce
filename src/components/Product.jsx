@@ -1,15 +1,9 @@
 import React from 'react'
-import { useNavigate } from "react-router-dom"
+import { Link } from "react-router-dom"
 import "../css/product.css"
 
 const Product = ({ product }) => {
     const { id, description, image, price, title } = product
-
-    const navigate = useNavigate()
-
-    const handleNavigate = () => {
-        navigate(`/product-details/${id}`)
-    }
 
     return (
         <div className="card">
@@ -19,7 +13,7 @@ const Product = ({ product }) => {
                 <h3>{price}₺</h3>
             </div>
             <div className="flex-row">
-                <button onClick={handleNavigate} className="card-button">Ürün Detayı</button>
+                <Link to={`/product-details/${id}`} className="card-button">Ürün Detayı</Link>
             </div>
         </div>
     )
