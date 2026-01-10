@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1768049266322" clover="3.2.0">
+  <project timestamp="1768049266322" name="All files">
+    <metrics statements="125" coveredstatements="81" conditionals="18" coveredconditionals="7" methods="54" coveredmethods="34" elements="197" coveredelements="122" complexity="0" loc="125" ncloc="125" packages="8" files="25" classes="25"/>
+    <package name="src">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="App.css" path="/Users/onur/projects/e-commerce/src/App.css">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="App.jsx" path="/Users/onur/projects/e-commerce/src/App.jsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="10" count="2" type="stmt"/>
+      </file>
+      <file name="index.css" path="/Users/onur/projects/e-commerce/src/index.css">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="main.jsx" path="/Users/onur/projects/e-commerce/src/main.jsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="9" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components">
+      <metrics statements="68" coveredstatements="30" conditionals="14" coveredconditionals="4" methods="31" coveredmethods="14"/>
+      <file name="CartDrawer.jsx" path="/Users/onur/projects/e-commerce/src/components/CartDrawer.jsx">
+        <metrics statements="11" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="6"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="10" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="12" count="5" type="stmt"/>
+        <line num="13" count="5" type="stmt"/>
+        <line num="16" count="5" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="22" count="5" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+      </file>
+      <file name="Header.jsx" path="/Users/onur/projects/e-commerce/src/components/Header.jsx">
+        <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="2" methods="6" coveredmethods="6"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="7" type="stmt"/>
+        <line num="14" count="13" type="stmt"/>
+        <line num="15" count="7" type="stmt"/>
+        <line num="16" count="7" type="stmt"/>
+        <line num="18" count="7" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="22" count="7" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="26" count="7" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="30" count="7" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+      </file>
+      <file name="Loading.jsx" path="/Users/onur/projects/e-commerce/src/components/Loading.jsx">
+        <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+      </file>
+      <file name="NotFound.jsx" path="/Users/onur/projects/e-commerce/src/components/NotFound.jsx">
+        <metrics statements="4" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+      </file>
+      <file name="Product.jsx" path="/Users/onur/projects/e-commerce/src/components/Product.jsx">
+        <metrics statements="6" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+      </file>
+      <file name="ProductDetails.jsx" path="/Users/onur/projects/e-commerce/src/components/ProductDetails.jsx">
+        <metrics statements="24" coveredstatements="1" conditionals="8" coveredconditionals="0" methods="8" coveredmethods="0"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="40" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+      </file>
+      <file name="ProductList.jsx" path="/Users/onur/projects/e-commerce/src/components/ProductList.jsx">
+        <metrics statements="7" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.config">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="RouterConfig.jsx" path="/Users/onur/projects/e-commerce/src/config/RouterConfig.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.container">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="PageContainer.jsx" path="/Users/onur/projects/e-commerce/src/container/PageContainer.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.css">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="cartDrawer.css" path="/Users/onur/projects/e-commerce/src/css/cartDrawer.css">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="header.css" path="/Users/onur/projects/e-commerce/src/css/header.css">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="loader.css" path="/Users/onur/projects/e-commerce/src/css/loader.css">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="notFound.css" path="/Users/onur/projects/e-commerce/src/css/notFound.css">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="product.css" path="/Users/onur/projects/e-commerce/src/css/product.css">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="productDetails.css" path="/Users/onur/projects/e-commerce/src/css/productDetails.css">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="productList.css" path="/Users/onur/projects/e-commerce/src/css/productList.css">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.pages">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="Home.jsx" path="/Users/onur/projects/e-commerce/src/pages/Home.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.redux">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="store.jsx" path="/Users/onur/projects/e-commerce/src/redux/store.jsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="6" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.redux.slices">
+      <metrics statements="48" coveredstatements="42" conditionals="4" coveredconditionals="3" methods="19" coveredmethods="16"/>
+      <file name="appSlice.jsx" path="/Users/onur/projects/e-commerce/src/redux/slices/appSlice.jsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+      </file>
+      <file name="cartSlice.jsx" path="/Users/onur/projects/e-commerce/src/redux/slices/cartSlice.jsx">
+        <metrics statements="21" coveredstatements="20" conditionals="4" coveredconditionals="3" methods="9" coveredmethods="9"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="5" type="cond" truecount="1" falsecount="1"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="17" count="5" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="21" count="5" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="27" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="35" count="3" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="40" count="2" type="stmt"/>
+        <line num="44" count="2" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
+        <line num="51" count="5" type="stmt"/>
+      </file>
+      <file name="productSlice.jsx" path="/Users/onur/projects/e-commerce/src/redux/slices/productSlice.jsx">
+        <metrics statements="24" coveredstatements="19" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="7"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="13" count="4" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="21" count="4" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="29" count="4" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="38" count="2" type="stmt"/>
+        <line num="42" count="4" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="45" count="4" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
+        <line num="47" count="1" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="50" count="4" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="53" count="4" type="stmt"/>
+        <line num="54" count="1" type="stmt"/>
+        <line num="55" count="1" type="stmt"/>
+        <line num="60" count="4" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
