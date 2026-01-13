@@ -6,7 +6,7 @@ import { FaMoon } from "react-icons/fa";
 import Badge from '@mui/material/Badge';
 import { useDispatch, useSelector } from "react-redux";
 import { setDrawer } from "../redux/slices/cartSlice";
-import { getProductBySearch } from "../redux/slices/ProductSlice";
+import { getProductBySearch } from "../redux/slices/productSlice";
 import { useNavigate } from "react-router-dom";
 
 const Header = () => {

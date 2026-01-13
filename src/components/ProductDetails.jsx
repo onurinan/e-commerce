@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react'
 import { useParams } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
-import { getProductByIDFromAPI, setSelectedProduct } from "../redux/slices/ProductSlice"
+import { getProductByIDFromAPI, setSelectedProduct } from "../redux/slices/productSlice"
 import { CiCirclePlus } from "react-icons/ci";
 import { CiCircleMinus } from "react-icons/ci";
 import "../css/ProductDetails.css"

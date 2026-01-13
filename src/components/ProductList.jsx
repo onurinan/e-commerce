@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from "react-redux"
-import { getAllProducts, getProductBySearch } from "../redux/slices/ProductSlice"
+import { getAllProducts, getProductBySearch } from "../redux/slices/productSlice"
 import Product from "./Product"
 import "../css/productList.css"
 
