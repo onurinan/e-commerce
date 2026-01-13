@@ -3,7 +3,7 @@ import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
 import ProductDetails from '../components/ProductDetails';
-import productReducer from '../redux/slices/ProductSlice';
+import productReducer from '../redux/slices/productSlice';
 import cartReducer from '../redux/slices/cartSlice';
 
 vi.mock('react-router-dom', () => ({

@@ -5,7 +5,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import { BrowserRouter } from 'react-router-dom';
 import Header from '../components/Header';
 import cartReducer from '../redux/slices/cartSlice';
-import productReducer from '../redux/slices/ProductSlice';
+import productReducer from '../redux/slices/productSlice';
 
 const mockNavigate = vi.fn();
 vi.mock('react-router-dom', async () => {

@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { getProductByIDFromAPI, setSelectedProduct } from "../redux/slices/productSlice"
 import { CiCirclePlus } from "react-icons/ci";
 import { CiCircleMinus } from "react-icons/ci";
-import "../css/ProductDetails.css"
+import "../css/productDetails.css"
 import { addToCart, calculateTotalAmount } from "../redux/slices/cartSlice";
 
 const ProductDetails = () => {
