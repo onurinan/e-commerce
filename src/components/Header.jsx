@@ -30,7 +30,7 @@ const Header = () => {
     return (
         <div className="header-wrapper">
             <div onClick={navigateToHome} className="header-logo flex-row">
-                <img className="logo" src="../src/images/logo.png" alt="logo" />
+                <img className="logo" src="../images/logo.png" alt="logo" />
                 <p>Onur A.S.</p>
             </div>
             <div className="flex-row">
