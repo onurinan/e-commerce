@@ -1,16 +1,41 @@
-# React + Vite
+# 🛒 Onur A.S. E-Commerce Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, high-performance e-commerce frontend built with **React**, **Redux Toolkit**, and **Vite**. This project features a full testing suite using **Vitest** and **React Testing Library**, covering everything from state management to UI interactions.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Key Features
 
-## React Compiler
+* **Global State Management:** Centralized store using Redux Toolkit for products, cart, and app-wide UI states.
+* **Dynamic Product Catalog:** Real-time search filtering and category-based navigation.
+* **Advanced Cart Logic:** Persistent cart drawer with quantity adjustments and automatic total calculations.
+* **Theme Switching:** Integrated Light and Dark mode toggle.
+* **Responsive Routing:** Clean URL structures using `react-router-dom`.
+* **Robust Testing:** 100% logic coverage for slices and comprehensive component-level integration tests.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Technology | Purpose |
+| :--- | :--- |
+| **React (Vite)** | Frontend Framework |
+| **Redux Toolkit** | State Management |
+| **Vitest** | Unit & Integration Testing |
+| **React Testing Library** | Component Testing |
+| **Material UI** | UI Components (Drawer, Badge) |
+| **React Icons** | Visual Iconography |
+
+---
+
+## 📂 Project Structure
+
+```text
+src/
+├── components/         # Reusable UI (Header, Product, Loading, etc.)
+├── config/             # Router and App configurations
+├── css/                # Component-specific stylesheets
+├── pages/              # Main view containers (Home)
+├── redux/              # Store setup and feature slices
+│   └── slices/         # Logic for Cart, Products, and App states
+└── tests/              # Full Vitest suite
