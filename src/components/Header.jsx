@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setDrawer } from "../redux/slices/cartSlice";
 import { getProductBySearch } from "../redux/slices/productSlice";
 import { useNavigate } from "react-router-dom";
+import myLogo from "../images/logo.png"
 
 const Header = () => {
     const [theme, setTheme] = useState(false)
@@ -30,7 +31,7 @@ const Header = () => {
     return (
         <div className="header-wrapper">
             <div onClick={navigateToHome} className="header-logo flex-row">
-                <img className="logo" src="../images/logo.png" alt="logo" />
+                <img className="logo" src={myLogo} alt="logo" />
                 <p>Onur A.S.</p>
             </div>
             <div className="flex-row">
